@@ -6,10 +6,10 @@ html{
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-family: 'Spectral', serif;
     text-align: left;
     line-height: 1.2;
     font-size: 1rem;
+
 }
 
 a {
@@ -30,10 +30,276 @@ svg {
 
 /* HEADER */
 
+header, #topPage {
+    background-color: #ffc017;
+    color: #191919;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    border-bottom: 1px solid #191919;
+    text-align: center;
+    /* DA INSERIRE DOPO
+        position: sticky;
+        top: 0;
+    */
+}
 
+nav ul li {
+    display: none;
+}
+
+nav ul li:nth-child(5){
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 0.8em;
+}
+
+nav ul li a{
+    color: #191919;
+}
+nav ul li:nth-child(5) a{
+    background-color: #191919;
+    color: #F1F1F1;
+    padding: 12px 20px;
+    border-radius: 20px;
+}
+
+#mainContent {
+    padding: 0px 20px;
+}
 
 /* MAIN */
+
+/* TOP PAGE SECTION */
+
+#topPage {
+    border-bottom: 1px solid #191919;
+}
+
+#topPage p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+#topPage div:nth-child(1) {
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px 30px;
+    margin-right: 20vw;
+}
+
+#topPage div:nth-child(1) p a {
+    background-color: #191919;
+    color: #F1F1F1;
+    padding: 10px 50px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+}
+
+h1 {
+    font-size: 4.2rem;
+    font-family: 'Spectral', serif;
+    line-height: 1;
+}
+
+/* TRENDING SECTION */
+
+#trendingSection {
+    padding: 30px 0;
+    border-bottom: 1px solid #19191948;
+    margin-bottom: 20px;
+}
+
+.articlesList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sectionHeader {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+
+h4 {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.articleImg {
+    border-radius: 50%;
+    width: 1.5em;
+    height: auto;
+}
+
+.trendingArticle {
+    display: flex;
+    align-items:baseline;
+    gap: 10px;
+    margin-bottom: 20px;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.trendingArticle div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+}
+
+.numberArticle {
+    font-size: 1.5em;
+    opacity: 0.3;
+    font-weight: bold;
+}
+
+.author {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.author p {
+    opacity: 0.5;
+}
+
+.datas {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.5;
+    font-size: 0.8em;
+}
+
+
+
+/* DISCOVER SECTION */
+
+#discoverSection {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #19191945;
+}
+
+#discoverSection ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    align-content: center;
+    margin-bottom: 40px;
+}
+
+#discoverSection h2 {
+    margin-bottom: 20px;
+}
+
+#discoverSection ul li {
+    color: #191919;
+    opacity: 0.5;
+    padding: 5px 10px;
+    border: 1.5px solid #191919;
+    border-radius: 2px;
+}
+
+#discoverSection ul li a{
+    color: #191919;
+    font-size: 0.7em;
+}
+
+/* ARTICLES */
+
+#moreArticlesSection {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.articleScroll {
+    display: flex;
+    gap: 0.8em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.articleInside {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sideImage {
+    width: 40%;
+    height: auto;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.articleContent {
+    font-size: 0.8em;
+    opacity: 0.7;
+    padding-right: 4em;
+}
+
+.spanCircled {
+    background: #959595;
+    padding: 5px;
+    border-radius: 15px;
+}
+
 
 
 
 /* FOOTER */
+
+footer {
+    background-color: #000000;
+    padding-bottom: 50px;
+}
+
+footer img, footer div {
+    padding: 20px;
+}
+
+footer div ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1.5px solid #F1F1F1;
+    padding-bottom: 25px;
+
+}
+
+footer div ul li a {
+    color: #F1F1F1;
+}
+
+.footerList ul li {
+    display: none;
+}
+
+.footerList ul li:nth-child(1), .footerList ul li:nth-child(6), .footerList ul li:nth-child(7), .footerList ul li:nth-child(8) {
+    display: block;
+}
+
