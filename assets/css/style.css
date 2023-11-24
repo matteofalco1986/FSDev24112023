@@ -78,6 +78,10 @@ nav ul li:nth-child(5) a{
 
 /* MAIN */
 
+.sideFooter {
+    display: none;
+}
+
 /* TOP PAGE SECTION */
 
 #topPage {
@@ -121,7 +125,7 @@ h1 {
 
 .articlesList {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .sectionHeader {
@@ -140,7 +144,7 @@ h2 {
 
 h4 {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .articleImg {
@@ -152,7 +156,7 @@ h4 {
 .trendingArticle {
     display: flex;
     align-items:baseline;
-    gap: 10px;
+    gap: 25px;
     margin-bottom: 20px;
     min-width: 300px;
     max-width: 500px;
@@ -303,3 +307,108 @@ footer div ul li a {
     display: block;
 }
 
+
+/* TABLET RESPONSIVE */
+
+
+ @media screen and (min-width: 576px){
+    nav ul li:nth-child(4){
+         display: block;
+        }
+    footer div ul {
+        border-bottom: transparent;
+    }
+
+}
+    
+    
+@media screen and (min-width: 730px){
+    #mainContent, #topPage, footer img, footer div {
+        padding: 0px 50px;
+    }
+    header {
+        padding: 1.5em 50px;
+    }
+
+    footer img {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    footer, .footerList{
+        padding-bottom: 0;
+    }
+    .articleImg {
+        max-width: 259px;
+    }
+    nav ul li {
+        display: block;
+    }
+    .articlesList {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .trendingArticle {
+        flex-basis: 40%;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+    p.articleContent {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 912px){
+    .belowContents {
+        display: flex;
+        gap: 50px;
+    }
+    .side {
+        order: 1;
+    }
+    .sideFooter{
+        display: block;
+    }
+    footer{
+        display: none;
+    }
+    .sideFooter {
+    }
+    
+    .sideFooter img, .sideFooter div {
+        padding: 20px;
+    }
+    
+    .sideFooter div ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-bottom: 25px;
+    
+    }
+    
+    .sideFooter div ul li a {
+        color: #191919;
+    }
+    .sideFooter div ul li {
+        display: block;
+        opacity: 0.6;
+        font-size: 0.8em;
+    }
+    div.footerList {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 1083px){
+    /* CONTENUTO A TRIPLETTE */
+    .trendingArticle {
+        flex-basis: 30%;
+    }
+}
+
+
+@media screen and (min-width: 1330px){
+    /* il contenuto si comincia a fissare */
+}
