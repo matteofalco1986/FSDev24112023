@@ -1,6 +1,23 @@
+/* GENERAL SETTINGS */
+
+html{
+    min-width: 360px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-family: 'Spectral', serif;
+    text-align: left;
+    line-height: 1.2;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
 }
 
 /*
@@ -9,3 +26,14 @@ svg {
 }
 
 */
+
+
+/* HEADER */
+
+
+
+/* MAIN */
+
+
+
+/* FOOTER */
