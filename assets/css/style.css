@@ -20,12 +20,10 @@ li {
     list-style: none;
 }
 
-/*
-svg {
+
+.svgArt {
     display: none;
 }
-
-*/
 
 
 /* HEADER */
@@ -41,10 +39,9 @@ header {
     padding: 1.5em;
     border-bottom: 1px solid #191919;
     text-align: center;
-    /* DA INSERIRE DOPO
-        position: sticky;
-        top: 0;
-    */
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 nav ul li {
@@ -318,6 +315,18 @@ footer div ul li a {
     footer div ul {
         border-bottom: transparent;
     }
+    .svgArt{
+        display: block;
+    }
+    .top {
+        display: flex;
+        background-color: #FFC017;
+        border-bottom: 1px solid black;
+    }
+    #topPage {
+        border: none;
+        flex-grow: 1;
+    }
 
 }
     
@@ -398,6 +407,9 @@ footer div ul li a {
     }
     div.footerList {
         padding: 0;
+    }
+    .side {
+        overflow: hidden;
     }
 }
 
