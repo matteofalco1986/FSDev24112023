@@ -21,27 +21,39 @@ li {
 }
 
 
+
 .svgArt {
     display: none;
+    max-height: 40vh;
+}
+
+#mainContent {
+    max-width: 1300px;
+    z-index: 5;
 }
 
 
 /* HEADER */
 
 header, #topPage {
+    transition: background-color 1s;
     background-color: #ffc017;
     color: #191919;
+    
 }
+
 header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #191919;
+}
+.headerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5em;
-    border-bottom: 1px solid #191919;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
 }
 
 nav ul li {
@@ -62,8 +74,9 @@ nav ul {
 nav ul li a{
     color: #191919;
 }
-nav ul li:nth-child(5) a{
+.getStarted{
     background-color: #191919;
+    transition: background-color 1s;
     color: #F1F1F1;
     padding: 12px 20px;
     border-radius: 20px;
@@ -81,9 +94,6 @@ nav ul li:nth-child(5) a{
 
 /* TOP PAGE SECTION */
 
-#topPage {
-    border-bottom: 1px solid #191919;
-}
 
 #topPage p {
     font-size: 1.3rem;
@@ -94,7 +104,7 @@ nav ul li:nth-child(5) a{
     display:flex;
     flex-direction: column;
     gap: 30px;
-    padding: 60px 30px;
+    padding: 60px 20px;
     margin-right: 20vw;
 }
 
@@ -220,6 +230,14 @@ h4 {
     border-radius: 2px;
 }
 
+#discoverSection ul li:hover {
+    cursor: pointer;
+    background: rgb(186, 186, 186);
+    opacity: 0.8;
+    border-color: rgb(142, 142, 142);
+
+}
+
 #discoverSection ul li a{
     color: #191919;
     font-size: 0.7em;
@@ -310,24 +328,24 @@ footer div ul li a {
 
  @media screen and (min-width: 576px){
     nav ul li:nth-child(4){
-         display: block;
-        }
+        display: block;
+    }
     footer div ul {
         border-bottom: transparent;
     }
-    .svgArt{
-        display: block;
-    }
     .top {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
         background-color: #FFC017;
         border-bottom: 1px solid black;
     }
-    #topPage {
-        border: none;
-        flex-grow: 1;
+    #topPage{
+        grid-area: 1 / 1 / 1 / 6;
     }
-
+    .svgArt{
+        display: block;
+        grid-area: 1 / 4 / 1 / 7;
+    }
 }
     
     
@@ -335,8 +353,11 @@ footer div ul li a {
     #mainContent, #topPage, footer img, footer div {
         padding: 0px 50px;
     }
+    #topPage div:nth-child(1){
+        padding: 60px 0;
+    }
     header {
-        padding: 1.5em 50px;
+        padding: 0px 1.5em;
     }
 
     footer img {
@@ -370,33 +391,36 @@ footer div ul li a {
 
 @media screen and (min-width: 912px){
     .belowContents {
-        display: flex;
-        gap: 50px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    #moreArticlesSection {
+        grid-area: 1 / 1 / 1 / 8;
     }
     .side {
+        grid-area: 1 / 9 / 1 / 13;
         order: 1;
+    }
+    .sticky {
+        position: sticky;
+        top: 100px;
     }
     .sideFooter{
         display: block;
     }
     footer{
         display: none;
-    }
-    .sideFooter {
-    }
-    
+    }    
     .sideFooter img, .sideFooter div {
         padding: 20px;
-    }
-    
+    }  
     .sideFooter div ul {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
-        padding-bottom: 25px;
-    
-    }
-    
+        padding-bottom: 25px; 
+    }  
     .sideFooter div ul li a {
         color: #191919;
     }
@@ -407,9 +431,6 @@ footer div ul li a {
     }
     div.footerList {
         padding: 0;
-    }
-    .side {
-        overflow: hidden;
     }
 }
 
@@ -423,4 +444,16 @@ footer div ul li a {
 
 @media screen and (min-width: 1330px){
     /* il contenuto si comincia a fissare */
+    #mainContent, .headerContainer {
+        margin: auto;
+    }
+}
+
+.colorGreen {
+    background-color: #1a8917;
+    transition: background-color 1s;
+}
+.colorWhite{
+    background-color: #ffffff;
+    transition: background-color 1s;
 }
